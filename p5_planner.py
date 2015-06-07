@@ -176,6 +176,15 @@ goal_state = make_initial_state(Crafting['Goal'])
 	 return 0"""
 	 
 def heuristic(state):
+	state_score = 0
+	
+	if state["test_event1"] > 1 and state["test_event1"] > goal_state["test_event1"]:
+		return sys.maxint
+	"""if state["test_event2"] > 1 and state["test_event2"] > goal_state["test_event2"]:
+		return sys.maxint	"""
+	if state["test_event4"] > 1 and state["test_event4"] > goal_state["test_event4"]:
+		return sys.maxint
+	
 	return 0
 
 #This constructs the rules needed for the graph. This was given.

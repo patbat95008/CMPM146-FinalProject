@@ -3,29 +3,31 @@
     "score": 0
   }, 
   "Goal": {
-    "score": 11
+    "score": 5
   },
   "Items": [
     "score",
     "test_event1",
-    "test_event2"
+    "test_event2",
+	 "test_event3",
+	 "test_event4"
   ], 
   "Recipes": {
     "test_event1": {
       "Produces": {
          "score": 1,
-         "test_event1": true
+         "test_event1": 1
       },
-      "Time": 2,
+      "Time": 1,
       "Description": "Test event 1."
     }, 
     "test_event2": {
       "Produces": {
-        "test_event2": true,
-        "score": -1
+        "test_event2": 1,
+        "score": 1
       }, 
       "Requires": {
-         "test_event1": true
+         "test_event1": 1
       }, 
       "Time": 1,
       "Description": "Test event 2."
@@ -35,14 +37,15 @@
         "score": 10
       }, 
       "Requires": {
-        "test_event2": true
+        "test_event2": 1
       }, 
       "Time": 4,
       "Description": "Test event 3."
     },
     "test_event4": {
       "Produces": {
-        "score": 1
+        "score": 1,
+		  "test_event4": 1
       }, 
       "Time": 1,
       "Description": "Test event 4."
