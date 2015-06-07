@@ -16,7 +16,8 @@
          "score": 1,
          "test_event1": true
       },
-      "Time": 2
+      "Time": 2,
+      "Description": "Test event 1."
     }, 
     "test_event2": {
       "Produces": {
@@ -26,7 +27,8 @@
       "Requires": {
          "test_event1": true
       }, 
-      "Time": 1
+      "Time": 1,
+      "Description": "Test event 2."
     }, 
     "test_event3": {
       "Produces": {
@@ -35,13 +37,15 @@
       "Requires": {
         "test_event2": true
       }, 
-      "Time": 4
+      "Time": 4,
+      "Description": "Test event 3."
     },
     "test_event4": {
       "Produces": {
         "score": 1
       }, 
-      "Time": 1
+      "Time": 1,
+      "Description": "Test event 4."
     }
   }
 }
