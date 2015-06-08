@@ -178,11 +178,23 @@ goal_state = make_initial_state(Crafting['Goal'])
 def heuristic(state):
 	state_score = 0
 	
-	if state["test_event1"] > 1 and state["test_event1"] > goal_state["test_event1"]:
+	if state["bad_event1"] > 1 and state["bad_event1"] > goal_state["bad_event1"]:
 		return sys.maxint
-	"""if state["test_event2"] > 1 and state["test_event2"] > goal_state["test_event2"]:
-		return sys.maxint	"""
-	if state["test_event4"] > 1 and state["test_event4"] > goal_state["test_event4"]:
+	if state["bad_event2"] > 1 and state["bad_event2"] > goal_state["bad_event2"]:
+		return sys.maxint
+	if state["bad_event3"] > 1 and state["bad_event3"] > goal_state["bad_event3"]:
+		return sys.maxint
+	if state["bad_event4"] > 1 and state["bad_event4"] > goal_state["bad_event4"]:
+		return sys.maxint
+	if state["good_event1"] > 1 and state["good_event1"] > goal_state["good_event1"]:
+		return sys.maxint
+	if state["good_event2"] > 1 and state["good_event2"] > goal_state["good_event2"]:
+		return sys.maxint	
+	if state["good_event3"] > 1 and state["good_event3"] > goal_state["good_event3"]:
+		return sys.maxint
+	if state["good_event4"] > 1 and state["good_event4"] > goal_state["good_event4"]:
+		return sys.maxint
+	if state["industrialized"] > 1 and state["industrialized"] > goal_state["industrialized"]:
 		return sys.maxint
 	
 	return 0
