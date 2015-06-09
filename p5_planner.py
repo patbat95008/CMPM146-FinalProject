@@ -186,6 +186,12 @@ def heuristic(state):
 		return sys.maxint
 	if state["bad_event4"] > 1 and state["bad_event4"] > goal_state["bad_event4"]:
 		return sys.maxint
+	if state["bad_event5"] > 1 and state["bad_event5"] > goal_state["bad_event5"]:
+		return sys.maxint
+	if state["bad_event6"] > 1 and state["bad_event6"] > goal_state["bad_event6"]:
+		return sys.maxint
+	if state["bad_event7"] > 1 and state["bad_event7"] > goal_state["bad_event7"]:
+		return sys.maxint
 	if state["good_event1"] > 1 and state["good_event1"] > goal_state["good_event1"]:
 		return sys.maxint
 	if state["good_event2"] > 1 and state["good_event2"] > goal_state["good_event2"]:
@@ -194,7 +200,15 @@ def heuristic(state):
 		return sys.maxint
 	if state["good_event4"] > 1 and state["good_event4"] > goal_state["good_event4"]:
 		return sys.maxint
+	if state["good_event5"] > 1 and state["good_event5"] > goal_state["good_event5"]:
+		return sys.maxint
+	if state["good_event6"] > 1 and state["good_event6"] > goal_state["good_event6"]:
+		return sys.maxint
+	if state["good_event7"] > 1 and state["good_event7"] > goal_state["good_event7"]:
+		return sys.maxint
 	if state["industrialized"] > 1 and state["industrialized"] > goal_state["industrialized"]:
+		return sys.maxint
+	if state["starting_event"] > 1 and state["starting_event"] > goal_state["starting_event"]:
 		return sys.maxint
 	
 	return 0

@@ -4,8 +4,8 @@
 	 "bad_score": 0
   }, 
   "Goal": {
-    "good_score": 15,
-	 "bad_score": 2
+    "good_score": 20,
+	 "bad_score": 5
   },
   "Items": [
     "good_score",
@@ -14,23 +14,36 @@
     "bad_event2",
 	 "bad_event3",
 	 "bad_event4",
+	 "bad_event5",
+	 "bad_event6",
+	 "bad_event7",
 	 "industrialized",
 	 "good_event1",
 	 "good_event2",
 	 "good_event3",
 	 "good_event4",
+	 "good_event5",
+	 "good_event6",
+	 "good_event7",
 	 "blank_event",
-	 "blank_event2"
+	 "blank_event2",
+	 "starting_event"
   ], 
   "Recipes": {
+	 "starting_event": {
+		"Produces": {
+			"starting_event": 1
+		},
+		"Time": 1,
+		"Description": "A new day dawns for the nation, it's history beginning."
+	},
     "industrialization": {
       "Produces": {
          "good_score": 10,
          "industrialized": 1
       },
 		"Requires": {
-			"good_score" : 5,
-			"bad_score": 3
+			"good_score" : 3
 		},
       "Time": 1,
       "Description": "The nation's most productive members work together to bring about a new age. An age of machines. An industrial revolution."
@@ -38,8 +51,13 @@
 	 "bad_event1": {
       "Produces": {
          "bad_score": 1,
+			"starting_event": 1,
          "bad_event1": 1
       },
+		"Requires": {
+        "starting_event": 0,
+		  "good_event1": 0
+      }, 
       "Time": 1,
       "Description": "The country gets off to a rocky start when the founding fathers make off with the nation's finances."
     }, 
@@ -49,7 +67,7 @@
 		  "bad_event2": 1        
       }, 
 		"Requires": {
-        "bad_event1": 1
+        "starting_event": 1
       }, 
       "Time": 1,
       "Description": "Things quickly spiral out of control as the temporary governor decides to take power for life."
@@ -60,7 +78,7 @@
 		  "bad_event3": 1
       },  
 		"Requires": {
-        "bad_event1": 1
+        "starting_event": 1
       }, 
       "Time": 1,
       "Description": "A massive famine engulfed the country, many died from starvation while the country's rulers fought for control."
@@ -71,27 +89,68 @@
 		  "bad_event4": 1
       },  
 		"Requires": {
-        "bad_event1": 1,
+        "starting_event": 1,
 		  "industrialized": 1
       }, 
       "Time": 1,
       "Description": "A new plague spreads throughout the land, and the people die by the thousands."
     },
+	 "bad_event5": {
+      "Produces": {
+        "bad_score": 2,
+		  "bad_event5": 1
+      },  
+		"Requires": {
+        "starting_event": 1,
+		  "industrialized": 1
+      }, 
+      "Time": 1,
+      "Description": "A devastating war with a neighbouring country leaves the country's cities burning and its leaders shamed."
+    },
+	 "bad_event6": {
+      "Produces": {
+        "bad_score": 2,
+		  "bad_event6": 1
+      },  
+		"Requires": {
+        "starting_event": 1,
+		  "industrialized": 1
+      }, 
+      "Time": 1,
+      "Description": "The national animal goes extinct. Nobody seems to care."
+    },
+	 "bad_event7": {
+      "Produces": {
+        "bad_score": 2,
+		  "bad_event7": 1
+      },  
+		"Requires": {
+        "starting_event": 1,
+		  "industrialized": 1
+      }, 
+      "Time": 1,
+      "Description": "An 'environmental disaster' kills all plant life in the country."
+    },
 	 "good_event1": {
       "Produces": {
          "good_score": 1,
-			"good_event1": 1
+			"good_event1": 1,
+			"starting_event": 1
       },
+		"Requires": {
+        "starting_event": 0,
+		  "bad_event1": 0
+      }, 
       "Time": 1,
       "Description": "A proud day begins for the nation as the declaration of independence is signed. All of the country's leaders are in attendance."
     }, 
 	 "good_event2": {
       "Produces": {
-         "good_score": 1,
+         "good_score": 3,
 			"good_event2": 1
       },
 		"Requires": {
-			"good_event1": 1
+			"starting_event": 1
 		},
       "Time": 1,
       "Description": "A bountiful harvest leaves none starving, and a new holiday is christened celebrating the new nation."
@@ -102,7 +161,7 @@
 			"good_event3": 1
       },
 		"Requires": {
-			"good_event1": 1,
+			"starting_event": 1,
 			"industrialized": 1
 		},
       "Time": 2,
@@ -114,11 +173,47 @@
 			"good_event4": 1
       },
 		"Requires": {
-			"good_event1": 1,
+			"starting_event": 1,
 			"industrialized": 1
 		},
       "Time": 2,
       "Description": "The world is engulfed in a worldwide conflict. The country ends up on the winning side, and gains much new territory."
+    }, 
+	 "good_event5": {
+      "Produces": {
+         "good_score": 2,
+			"good_event5": 1
+      },
+		"Requires": {
+			"starting_event": 1,
+			"industrialized": 1
+		},
+      "Time": 2,
+      "Description": "The nation becomes one of the first to host international games within its borders. A new age of peace seems inevitable."
+    }, 
+	 "good_event6": {
+      "Produces": {
+         "good_score": 1,
+			"good_event6": 1
+      },
+		"Requires": {
+			"starting_event": 1,
+			"industrialized": 1
+		},
+      "Time": 2,
+      "Description": "Immigrants flood to the country, taking jobs that nobody else would work. People still complain."
+    }, 
+	 "good_event7": {
+      "Produces": {
+         "good_score": 3,
+			"good_event7": 1
+      },
+		"Requires": {
+			"good_event1": 1,
+			"industrialized": 1
+		},
+      "Time": 2,
+      "Description": "The country successfully lands a man on the moon. They also bring him home safely."
     }, 
     "blank_event": {
       "Produces": {
