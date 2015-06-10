@@ -4,10 +4,12 @@
 	 "bad_score": 0
   }, 
   "Goal": {
-    "good_score": 5,
-	 "bad_score": 15
+    "good_score": 10,
+	 "bad_score": 1
   },
   "Items": [
+	 "good_end",
+	 "bad_end",
     "good_score",
 	 "bad_score",
     "bad_event1",
@@ -230,6 +232,27 @@
       }, 
       "Time": 500,
       "Description": "-"
+    },
+	 "good_end": {
+      "Produces": {
+         "good_end": 1
+      },
+		"Requires": {
+			"good_event1": 1,
+			"industrialized": 1
+		},
+      "Time": 1,
+      "Description": "The country becomes the first to establish a colony on another world. Good end!"
+    }, 
+	 "bad_end": {
+      "Produces": {
+			"bad_end": 1
+      },
+		"Requires": {
+			"bad_event1": 1
+		},
+      "Time": 2,
+      "Description": "A meteor hits the capitol. In the following chaos, neighbouring countries invade, killing and pillaging until the culture is erased from history. Bad end!"
     }
   }
 }
